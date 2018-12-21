@@ -92,7 +92,6 @@ function nameUpdate(){
             console.log(err);
         } else {
         obj = JSON.parse(data);
-        console.log(obj);
         a = obj.username
 
         $("#nom").text(a)
@@ -104,4 +103,24 @@ function nameUpdate(){
 
 function notAvail() {
     alert('Feature is not available yet ! Will be released soon');
+}
+
+async function getPatients() {
+    var input = document.getElementById("pNum").value
+    let value = await getData(input)
+
+    $("#pName").text(value[0].data.name)
+    $("#pAge").text(value[0].data.age)
+    $("#pNumber").text(value[0].data.phone)
+    $("#pBG").text(value[0].data.bloodgroup)
+    $("#pGender").text(value[0].data.gender)
+    $("#pAllerg").text(value[0].data.allergies)
+
+}
+
+async function getVisits(){
+    var input = document.getElementById("pNum").value
+    let value = await getData(input)
+
+    ipcRenderer.send('channel1','visit')
 }

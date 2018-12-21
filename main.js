@@ -2,6 +2,22 @@ const {app,BrowserWindow,ipcMain} = require('electron')
 
 let loginScreen
 
+function setVisitWindow() {
+
+  visitWindow = new BrowserWindow({
+    width: 600,
+    height: 400,
+    icon: './assets/app/icon64.png'
+  })
+
+  visitWindow.loadFile('dashboard/visits.html')
+
+  visitWindow.on('closed', function () {
+
+    visitWindow = null
+  })
+}
+
 function createWindow () {
 
   loginScreen = new BrowserWindow({
@@ -41,6 +57,8 @@ ipcMain.on('channel1',(e,args) => {
     loginScreen.loadFile('dashboard/index.html')
   }else if (args == 'query'){
     loginScreen.loadFile('dashboard/query.html')
+  } else if (args == 'visit'){
+    setVisitWindow();
   }
 })
 
@@ -51,4 +69,3 @@ app.on('activate', function () {
     createWindow()
   }
 })
-
