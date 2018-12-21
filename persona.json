@@ -1,0 +1,25 @@
+{
+    "dbIdentifier" : "",
+    "name" : "",
+    "gender" : "",
+    "dob" : "",
+    "phone" : "",
+    "photo" : "",
+    "bloodgroup" : "",
+    "superset" : "",
+    "docdetails" : {
+        "type" : ""
+    },
+    "allergies" : "",
+    "insurance" : ""
+
+}
+
+{
+    "visitId" : "sesh information in a different json struct",
+    "docname" : "",
+    "patientnum" : "",
+    "problem" : "",
+    "prescription" : "",
+    "billamt" : "",
+}
