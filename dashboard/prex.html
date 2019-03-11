@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>MedChain Dashboard</title>
+    <title>MediChain Dashboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -102,12 +102,16 @@
                             </a>
                         </li>
                         <li>
+                            <a href="query.html" onclick=queryPage()>
+                            <i class="fas fa-table"></i>Search Patient</a>
+                        </li>
+                        <li>
                             <a href="prex.html" onclick=goPrex()>
                                 <i class="fas fa-table"></i>Write a Prescription</a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="zmdi zmdi-alert-circle"></i>Emergency Data Request</a>
+                                <i class="zmdi zmdi-alert-circle"></i>Donor Page</a>
                         </li>
                         <li>
                             <a href="#">
@@ -217,107 +221,27 @@
                                                 <br>
                                                 <br>
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">OTP</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="pOTP" name="text-input" placeholder="Text" class="form-control">
-                                                    <small class="form-text text-muted">Enter OTP</small>
-                                                </div>
+                                                        <label for="text-input" class=" form-control-label">Prescription</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-9">
+                                                        <input type="text" id="prex" name="text-input" placeholder="Text" class="form-control">
+                                                        <small class="form-text text-muted">Enter Patients Prescription</small>
+                                                    </div>
                                             </div>
-                                        </div>
+                                        </fdiv>
                                     </div>
                                     </div>                                    
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary btn-sm" onclick=getOTP()>
-                                            <i class="fa fa-dot-circle-o"></i> Get OTP
+                                        <button type="submit" class="btn btn-primary btn-sm" onclick=prexAdd()>
+                                            <i class="fa fa-dot-circle-o"></i> Submit
                                         </button>
-                                        <button type="submit" class="btn btn-primary btn-sm" onclick=getPatients()>
-                                                <i class="fa fa-dot-circle-o"></i> OTP Submit
-                                            </button>
                                         <button type="reset" class="btn btn-danger btn-sm" onclick=resetVal()>
                                             <i class="fa fa-ban"></i> Reset
                                         </button>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-lg-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <strong>Patient</strong> Details
-                                        </div>
-                                        <div class="card-body card-block">
-                                            <div action="" enctype="multipart/form-data" class="form-horizontal">
-                                                <div class="row form-group">
-                                                    <!-- CRAZY FEST STARTS HERE -->
-                                                    <div class="col col-md-3">
-                                                        <label class=" form-control-label">Patient's Name :</label>
-                                                    </div>
-                                                    <div class="col-12 col-md-9">
-                                                        <label class=" form-control-label" id="pName"></label>
-                                                    </div>
-                                                    <br>
-                                                    <br>
-                                                    <div class="col col-md-3">
-                                                            <label class=" form-control-label">Age :</label>
-                                                        </div>
-                                                        <div class="col-12 col-md-3">
-                                                            <label class=" form-control-label" id="pAge"></label>
-                                                        </div>
-
-                                                    <div class="col col-md-3">
-                                                            <label class=" form-control-label">Phone Number :</label>
-                                                        </div>
-                                                        <div class="col-12 col-md-3">
-                                                            <label class=" form-control-label" id="pNumber"></label>
-                                                        </div>
-                                                    <br>
-                                                    <br>
-                                                    <div class="col col-md-3">
-                                                        <label class=" form-control-label">Blood Group :</label>
-                                                    </div>
-                                                    <div class="col-12 col-md-3">
-                                                        <label class=" form-control-label" id="pBG"></label>
-                                                    </div>
-
-                                                    <div class="col col-md-3">
-                                                        <label class=" form-control-label">Gender :</label>
-                                                    </div>
-                                                    <div class="col-12 col-md-3">
-                                                        <label class=" form-control-label" id="pGender"></label>
-                                                    </div>
-
-                                                    <br>
-                                                    <br>
-
-                                                    <div class="col col-md-3">
-                                                        <label class=" form-control-label">Allergies (If Any) : </label>
-                                                    </div>
-                                                    <div class="col-12 col-md-9">
-                                                        <label class=" form-control-label" id="pAllerg"></label>
-                                                    </div>
-                                                    <br>
-                                                    <br>
-                                                    <div class="col col-md-3">
-                                                            <label class=" form-control-label">Prescriptions : </label>
-                                                    </div>
-                                                    <div class="col-12 col-md-9">
-                                                            <label class=" form-control-label" id="pPrex"></label>
-                                                        </div>
-                                                    <br>
-                                                    <br>
-                                                
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="card-footer">
-                                                <span>Enjoy Medi-Chain's Unbeatable Performance and High Speed Data I/O Processes</span>
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>
-
+                            </div>
                             </div>
                         </div>   
                     </div>

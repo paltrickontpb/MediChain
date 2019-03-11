@@ -73,11 +73,11 @@
                             </a>
                         </li>
                         <li>
-                            <a href="query.html" onclick=queryPage()>
+                            <a href="query.html" onclick=notAll()>
                                 <i class="fas fa-chart-bar"></i>Patient Data</a>
                         </li>
                         <li>
-                            <a href="prex.html" onclick=goPrex()>
+                            <a href="prex.html" onclick=notAll()>
                                 <i class="far fa-check-square"></i>Write a Prescription for Patient</a>
                         </li>
                 </div>
@@ -97,20 +97,20 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li>
-                            <a href="index.html">
+                            <a href="simple.html">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard
                             </a>
                         </li>
                         <li>
-                            <a href="prex.html" onclick=goPrex()>
+                            <a href="#" onclick=notAll()>
                                 <i class="fas fa-table"></i>Write a Prescription</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" onclick=notAll()>
                                 <i class="zmdi zmdi-alert-circle"></i>Emergency Data Request</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" onclick=notAll()>
                                 <i class="zmdi zmdi-book"></i>Research Data Request</a>
                         </li>
                     </ul>
@@ -214,27 +214,15 @@
                                                     <input type="text" id="pNum" name="text-input" placeholder="Text" class="form-control">
                                                     <small class="form-text text-muted">Enter Patients Number Linked to Medi-Chain</small>
                                                 </div>
-                                                <br>
-                                                <br>
-                                                <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">OTP</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="pOTP" name="text-input" placeholder="Text" class="form-control">
-                                                    <small class="form-text text-muted">Enter OTP</small>
-                                                </div>
                                             </div>
-                                        </div>
+                                        </fdiv>
                                     </div>
                                     </div>                                    
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary btn-sm" onclick=getOTP()>
-                                            <i class="fa fa-dot-circle-o"></i> Get OTP
+                                        <button type="submit" class="btn btn-primary btn-sm" onclick=getPatients() disabled>
+                                            <i class="fa fa-dot-circle-o"></i> Submit
                                         </button>
-                                        <button type="submit" class="btn btn-primary btn-sm" onclick=getPatients()>
-                                                <i class="fa fa-dot-circle-o"></i> OTP Submit
-                                            </button>
-                                        <button type="reset" class="btn btn-danger btn-sm" onclick=resetVal()>
+                                        <button type="reset" class="btn btn-danger btn-sm" onclick=resetVal() disabled>
                                             <i class="fa fa-ban"></i> Reset
                                         </button>
                                     </div>
@@ -356,11 +344,18 @@
     <script>
         $(document).ready(()=>{
             nameUpdate()
+            document.getElementById("pNum").value = "9876512345"
+            getPatients()
         });
 
         function resetVal(){
             $('#pNum').val("")
         }
+
+        function notAll(){
+            alert('Basic Users require elevated access')
+        }
+
     </script>
 
 </body>

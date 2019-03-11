@@ -29,7 +29,7 @@ function createWindow () {
 
   loginScreen.loadFile('index.html')
 
-  loginScreen.webContents.openDevTools()
+  //loginScreen.webContents.openDevTools()
 
   loginScreen.on('closed', function () {
 
@@ -59,6 +59,12 @@ ipcMain.on('channel1',(e,args) => {
     loginScreen.loadFile('dashboard/query.html')
   } else if (args == 'visit'){
     setVisitWindow();
+  } else if (args == 'prex'){
+    loginScreen.loadFile('dashboard/prex.html')
+  } else if (args == 'user'){
+    loginScreen.loadFile('dashboard/simple.html')
+  } else if (args == 'donor'){
+    loginScreen.loadFile('dashboard/donor.html')
   }
 })
 

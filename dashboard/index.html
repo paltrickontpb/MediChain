@@ -74,7 +74,7 @@
                                 <i class="fas fa-chart-bar"></i>Patient Data</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="prex.html">
                                 <i class="far fa-check-square"></i>Write a Prescription for Patient</a>
                         </li>
                 </div>
@@ -99,16 +99,16 @@
                             </a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="query.html" onclick=queryPage()>
+                                <i class="fas fa-table"></i>Search Patient</a>
+                        </li>
+                        <li>
+                            <a href="prex.html" onclick=goPrex()>
                                 <i class="fas fa-table"></i>Write a Prescription</a>
                         </li>
                         <li>
-                            <a href="form.html">
-                                <i class="zmdi zmdi-account-add"></i>Add New Patient</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="zmdi zmdi-alert-circle"></i>Emergency Data Request</a>
+                            <a href="donor.html" onclick=goDonor()>
+                                <i class="zmdi zmdi-alert-circle"></i>Donor Page</a>
                         </li>
                         <li>
                             <a href="#">
@@ -216,7 +216,7 @@
                                             </div>
                                             <div class="text">
                                                 <h2>Query</h2>
-                                                <span>Get Patients Details</span>
+                                                <span>Get Patients Details from Blockchain</span>
                                                 <span>&nbsp;</span>
                                                 <span>&nbsp;</span>
                                             </div>
@@ -224,7 +224,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-lg-3">
+                            <div class="col-sm-6 col-lg-3" onclick=goPrex()>
                                 <div class="overview-item overview-item--c2">
                                     <div class="overview__inner">
                                         <div class="overview-box clearfix">
@@ -232,8 +232,8 @@
                                                 <i class="zmdi zmdi-sign-in"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>Add</h2>
-                                                <span>Add a patient to the Database</span>
+                                                <h2>Prescribe</h2>
+                                                <span>Add a prescription to the Database</span>
                                                 <span>&nbsp;</span>
                                             </div>
                                         </div>
